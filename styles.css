@@ -74,7 +74,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:999;op
 .nav.sc{background:rgba(8,8,8,.78);backdrop-filter:blur(16px);border-color:var(--line)}
 .nav-in{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand{display:flex;align-items:center;gap:12px}
-.brand img{width:40px;height:40px}
+.brand img{width:auto;height:60px}
 .brand b{font-family:var(--fd);font-weight:800;font-size:22px;letter-spacing:.16em}
 .brand b span{color:var(--flame)}
 .nav-l{display:flex;gap:4px}
