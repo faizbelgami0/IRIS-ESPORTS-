@@ -1,6 +1,6 @@
 function Manifesto() {
   const ref = useRef(null);
-  const words = "Raw talent is everywhere. Opportunity is not. IRIS exists to find the underdog, forge them in competition, and put them on the stage they earned.".split(" ");
+  const words = "Raw talent is everywhere. Opportunity is not. IRIS exists to find the underdog, forge them in competition and put them on the stage they earned.".split(" ");
   const flame = new Set(["everywhere.", "not.", "underdog,", "earned."]);
   const [lit, setLit] = useState(0);
   useEffect(() => {
@@ -57,10 +57,9 @@ function HomePage({ go, openT, openN }) {
           <div>
             <div className="kick fadein">Multi-title esports · India</div>
             <h1 className="disp" style={{ marginTop: 26 }}>
-              <span className="ln"><span style={{ animationDelay: ".15s" }}>Built to</span></span>
-              <span className="ln"><span className="fl" style={{ animationDelay: ".25s" }}>Compete.</span></span>
-              <span className="ln"><span style={{ animationDelay: ".35s" }}>Born to</span></span>
-              <span className="ln"><span className="outline" style={{ animationDelay: ".45s" }}>Conquer.</span></span>
+              <span className="ln"><span style={{ animationDelay: ".15s" }}>Rise.</span></span>
+              <span className="ln"><span className="fl" style={{ animationDelay: ".25s" }}>Conquer.</span></span>
+              <span className="ln"><span className="outline" style={{ animationDelay: ".45s" }}>Dominate.</span></span>
             </h1>
             <div className="hero-sub fadein" style={{ animationDelay: ".75s" }}>
               <p>One organization. Four battlegrounds. A pathway for the talent nobody else is watching.</p>
