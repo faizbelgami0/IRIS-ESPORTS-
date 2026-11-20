@@ -431,3 +431,111 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:999;op
 .toast.on{transform:translate(-50%,0)}
 .empty{padding:80px 0;text-align:center;color:var(--dim)}
 
+/* IRIS LEADERSHIP */
+
+.leadership-section {
+  padding: 100px 0;
+  background: #080808;
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  max-width: 950px;
+  margin: 50px auto 0;
+}
+
+.leader-card {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.1);
+  overflow: hidden;
+  transition: 0.35s ease;
+}
+
+.leader-card:hover {
+  border-color: #ff3030;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 35px rgba(255,30,30,0.12);
+}
+
+.leader-image {
+  height: 380px;
+  position: relative;
+  overflow: hidden;
+  background: #181818;
+}
+
+.leader-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.leader-card:hover .leader-image img {
+  transform: scale(1.04);
+}
+
+.leader-tag {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  padding: 8px 14px;
+  background: #ff3030;
+  color: #fff;
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.leader-info {
+  padding: 25px;
+}
+
+.leader-info h3 {
+  font-size: 27px;
+  margin: 0 0 8px;
+}
+
+.leader-role {
+  color: #ff3030;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: monospace;
+}
+
+.leader-info p {
+  color: #aaa;
+  line-height: 1.8;
+  margin-top: 18px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .leadership-section {
+    padding: 60px 0;
+  }
+
+  .leadership-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-top: 30px;
+    padding: 0 15px;
+  }
+
+  .leader-image {
+    height: 320px;
+  }
+
+  .leader-info {
+    padding: 20px;
+  }
+
+  .leader-info h3 {
+    font-size: 23px;
+  }
+}
