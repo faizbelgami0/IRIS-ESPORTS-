@@ -77,7 +77,7 @@ function HomePage({ go, openT, openN }) {
   className="iris-weapon"
 
   
-   { onMouseMove={(e) => {
+    onMouseMove={(e) => {
     const r = e.currentTarget.getBoundingClientRect();
     const x = ((e.clientX - r.left) / r.width - 0.5) * 50;
     const y = ((e.clientY - r.top) / r.height - 0.5) * 50;
