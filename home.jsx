@@ -41,15 +41,15 @@ function Divisions({ go }) {
 )}
 
 {g.key === "cod" && (
-  <img src="COD.png" className="division-img" alt="Call of Duty" />
+  <img src="CODM-INDIA.jpg" className="division-img" alt="Call of Duty" />
 )}
 
 {g.key === "valorant" && (
-  <img src="VALORANT.png" className="division-img" alt="Valorant" />
+  <img src="Valo-INDIA.jpg" className="division-img" alt="Valorant" />
 )}
 
 {g.key === "freefire" && (
-  <img src="FREEFIRE.png" className="division-img" alt="Free Fire" />
+  <img src="FreeFire.jpg" className="division-img" alt="Free Fire" />
 )}
 
 <div className="shade"></div>
