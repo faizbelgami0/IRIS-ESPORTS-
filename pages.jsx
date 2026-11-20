@@ -42,7 +42,7 @@ function AboutPage({ go }) {
 
             <div className="leader-card rv">
               <div className="leader-image">
-                <img src="FounderPhoto.jpg" alt="Founder of IRIS Esports" />
+                <img src="Founder.WEBP" alt="Founder of IRIS Esports" />
                 <span className="leader-tag">FOUNDER</span>
               </div>
               <div className="leader-info">
