@@ -89,8 +89,8 @@ function HomePage({ go, openT, openN }) {
   onTouchMove={(e) => {
     const t = e.touches[0];
     const r = e.currentTarget.getBoundingClientRect();
-    const x = ((t.clientX - r.left) / r.width - 0.5) * 12;
-    const y = ((t.clientY - r.top) / r.height - 0.5) * 12;
+    const x = ((t.clientX - r.left) / r.width - 0.5) * 35;
+    const y = ((t.clientY - r.top) / r.height - 0.5) * 35;
     e.currentTarget.style.setProperty("--aim-x", `${x}px`);
     e.currentTarget.style.setProperty("--aim-y", `${y}px`);
   }}
