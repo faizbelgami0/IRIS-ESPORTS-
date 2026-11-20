@@ -1,7 +1,10 @@
 function Manifesto() {
   const ref = useRef(null);
-  const words = "India has the talent. The world deserves to see it.IRIS Esports is on a mission to nurture talent, build world-class competitors and establish India's presence among the best in global esports..".split(" ");
-  const flame = new Set(["talent.", "iris esports.", "mission.", "competitors,", "best."]);
+  // const words = "India has the talent. The world deserves to see it.IRIS Esports is on a mission to nurture talent, build world-class competitors and establish India's presence among the best in global esports..".split(" ");
+  // const flame = new Set(["talent.", "iris esports.", "India's.", "competitors,", "best."]);
+  const words = "India has the talent. The world deserves to see it. IRIS Esports is on a mission to nurture talent, build world-class competitors, and establish India's presence among the best in global esports.".split(" ");
+
+const flame = new Set(["talent.", "it.", "competitors,", "India's", "esports."]);
   const [lit, setLit] = useState(0);
   useEffect(() => {
     const f = () => {
