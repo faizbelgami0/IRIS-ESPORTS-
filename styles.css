@@ -601,3 +601,58 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:999;op
     height: 32px;
   }
 }
+
+/* IRIS WEAPON - MOBILE FIX */
+
+@media (max-width: 768px) {
+
+  .hero-iris {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .iris-weapon {
+    width: 180px;
+    height: 180px;
+    margin: 10px auto;
+  }
+
+  .weapon-crosshair {
+    width: 125px;
+    height: 125px;
+  }
+
+  .weapon-crosshair::before {
+    height: 155px;
+    top: -15px;
+  }
+
+  .weapon-crosshair::after {
+    width: 155px;
+    left: -15px;
+  }
+
+  .weapon-ring {
+    width: 90px;
+    height: 90px;
+  }
+
+  .weapon-ring::before {
+    width: 68px;
+    height: 68px;
+  }
+
+  .weapon-barrel {
+    width: 46px;
+    height: 46px;
+    border-width: 5px;
+  }
+
+  .weapon-core {
+    width: 26px;
+    height: 26px;
+  }
+}
