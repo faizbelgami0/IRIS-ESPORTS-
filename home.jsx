@@ -29,7 +29,10 @@ function Divisions({ go }) {
     <div className="div-acc">
       {G.map((g, i) => (
         <div key={g.key} className={"dv spot" + (on === i ? " on" : "")} style={{ "--ac": g.ac }} onMouseEnter={() => setOn(i)} onClick={() => setOn(i)}>
-          <Ph label={`${g.name} key art`} />
+          {/* <Ph label={`${g.name} key art`} /> */}
+          {g.key === "bgmi" && (
+  <img src="/BGMI.jpg" className="division-img" alt="BGMI" />
+)}
           <div className="shade"></div>
           <i className="acc"></i>
           <span className="dv-n">0{i + 1} / 04</span>
