@@ -665,14 +665,3 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:999;op
 }
 
 
-/* GUN AIM ROTATION */
-
-.weapon-ring {
-  transform: rotate(var(--gun-angle, 0deg));
-  transition: transform 0.08s linear;
-}
-
-.weapon-barrel {
-  transform: rotate(var(--gun-angle, 0deg));
-  transition: transform 0.08s linear;
-}
