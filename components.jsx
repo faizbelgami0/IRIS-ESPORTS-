@@ -177,7 +177,7 @@ function Footer({ go }) {
       <div className="wrap">
         <div className="ft-top">
           <div>
-            <div className="brand"><img src="assets/iris-logo.png" alt="" /><b>IRIS<span>·</span>ESPORTS</b></div>
+            <div className="brand"><img src="IRISLogoWhiteShade.png" alt="" /><b>IRIS<span>·</span>ESPORTS</b></div>
             <p className="muted" style={{ marginTop: 20, maxWidth: 380, fontSize: 18 }}>Built to compete. Born to conquer. A multi-title Indian esports organization backing the underdog.</p>
             <form className="nl" onSubmit={(e) => { e.preventDefault(); if (email) { toast("You're on the list"); setEmail(""); } }}>
               <input type="email" placeholder="Email for drops & roster reveals" value={email} onChange={(e) => setEmail(e.target.value)} required />
