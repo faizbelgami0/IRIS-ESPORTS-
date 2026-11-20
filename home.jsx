@@ -71,8 +71,37 @@ function HomePage({ go, openT, openN }) {
           </div>
           {/* <div className="hero-iris fadein" style={{ animationDelay: ".4s" }}><IrisEye /></div> */}
           <div className="hero-iris fadein" style={{ animationDelay: ".4s" }}>
-  <div className="iris-weapon">
-    <div className="weapon-crosshair">
+  {/* <div className="iris-weapon"> */}
+
+<div
+  className="iris-weapon"
+  onMouseMove={(e) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - r.left) / r.width - 0.5) * 20;
+    const y = ((e.clientY - r.top) / r.height - 0.5) * 20;
+    e.currentTarget.style.setProperty("--aim-x", `${x}px`);
+    e.currentTarget.style.setProperty("--aim-y", `${y}px`);
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.setProperty("--aim-x", "0px");
+    e.currentTarget.style.setProperty("--aim-y", "0px");
+  }}
+  onTouchMove={(e) => {
+    const t = e.touches[0];
+    const r = e.currentTarget.getBoundingClientRect();
+    const x = ((t.clientX - r.left) / r.width - 0.5) * 12;
+    const y = ((t.clientY - r.top) / r.height - 0.5) * 12;
+    e.currentTarget.style.setProperty("--aim-x", `${x}px`);
+    e.currentTarget.style.setProperty("--aim-y", `${y}px`);
+  }}
+  onTouchEnd={(e) => {
+    e.currentTarget.style.setProperty("--aim-x", "0px");
+    e.currentTarget.style.setProperty("--aim-y", "0px");
+  }}
+>
+  
+            
+            <div className="weapon-crosshair">
       <div className="weapon-ring">
         <div className="weapon-barrel">
           <div className="weapon-core"></div>
