@@ -31,7 +31,7 @@ function Divisions({ go }) {
         <div key={g.key} className={"dv spot" + (on === i ? " on" : "")} style={{ "--ac": g.ac }} onMouseEnter={() => setOn(i)} onClick={() => setOn(i)}>
           {/* <Ph label={`${g.name} key art`} /> */}
           {g.key === "bgmi" && (
-  <img src="IRISTEAMBGMI.jpg" className="division-img" alt="BGMI" />
+  <img src="BGMI-INDIA.png" className="division-img" alt="BGMI" />
 )}
           <div className="shade"></div>
           <i className="acc"></i>
