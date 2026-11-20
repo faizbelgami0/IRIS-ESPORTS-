@@ -49,7 +49,7 @@ function Divisions({ go }) {
 )}
 
 {g.key === "freefire" && (
-  <img src="FreeFire.jpg" className="division-img" alt="Free Fire" />
+  <img src="FreeFire-INDIA.jpg" className="division-img" alt="Free Fire" />
 )}
 
 <div className="shade"></div>
