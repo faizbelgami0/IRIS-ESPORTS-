@@ -46,7 +46,7 @@ function AboutPage({ go }) {
                 <span className="leader-tag">FOUNDER</span>
               </div>
               <div className="leader-info">
-                <h3>FOUNDER NAME</h3>
+                <h3>MOHAMMED FAIZ BELGAMI</h3>
                 <span className="leader-role">FOUNDER & CEO</span>
                 <p>
                   Building IRIS Esports with a vision to discover talent,
@@ -61,7 +61,7 @@ function AboutPage({ go }) {
                 <span className="leader-tag">CO-FOUNDER</span>
               </div>
               <div className="leader-info">
-                <h3>CO-FOUNDER NAME</h3>
+                <h3>SYEDA UMME SALMA</h3>
                 <span className="leader-role">CO-FOUNDER</span>
                 <p>
                   Driving the mission forward through leadership, strategy
