@@ -25,7 +25,56 @@ function AboutPage({ go }) {
           </div>
         </div>
       </section>
+
+      {/* IRIS LEADERSHIP */}
       <section className="sec">
+        <div className="wrap">
+          <div className="sec-h">
+            <div>
+              <div className="kick rv">The People Behind IRIS</div>
+              <h2 className="h2 rv d1">
+                THE <span className="fl">LEADERSHIP.</span>
+              </h2>
+            </div>
+          </div>
+
+          <div className="leadership-grid">
+
+            <div className="leader-card rv">
+              <div className="leader-image">
+                <img src="FounderPhoto.jpg" alt="Founder of IRIS Esports" />
+                <span className="leader-tag">FOUNDER</span>
+              </div>
+              <div className="leader-info">
+                <h3>FOUNDER NAME</h3>
+                <span className="leader-role">FOUNDER & CEO</span>
+                <p>
+                  Building IRIS Esports with a vision to discover talent,
+                  create opportunities and put Indian esports on the global stage.
+                </p>
+              </div>
+            </div>
+
+            <div className="leader-card rv">
+              <div className="leader-image">
+                <img src="CoFounderPhoto.jpg" alt="Co-Founder of IRIS Esports" />
+                <span className="leader-tag">CO-FOUNDER</span>
+              </div>
+              <div className="leader-info">
+                <h3>CO-FOUNDER NAME</h3>
+                <span className="leader-role">CO-FOUNDER</span>
+                <p>
+                  Driving the mission forward through leadership, strategy
+                  and building a competitive organization for the future.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section className="sec coal">
         <div className="wrap">
           <div className="sec-h"><div><div className="kick rv">Roadmap</div><h2 className="h2 rv d1">The road <span className="outline">ahead.</span></h2></div></div>
           <div className="road">
