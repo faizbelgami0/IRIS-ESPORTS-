@@ -556,6 +556,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:999;op
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   z-index: 0;
 }
 
