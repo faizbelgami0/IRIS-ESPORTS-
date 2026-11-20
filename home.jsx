@@ -75,7 +75,9 @@ function HomePage({ go, openT, openN }) {
 
 <div
   className="iris-weapon"
-  onMouseMove={(e) => {
+
+  
+  {/* onMouseMove={(e) => {
     const r = e.currentTarget.getBoundingClientRect();
     const x = ((e.clientX - r.left) / r.width - 0.5) * 50;
     const y = ((e.clientY - r.top) / r.height - 0.5) * 50;
@@ -85,7 +87,19 @@ function HomePage({ go, openT, openN }) {
   onMouseLeave={(e) => {
     e.currentTarget.style.setProperty("--aim-x", "0px");
     e.currentTarget.style.setProperty("--aim-y", "0px");
-  }}
+  }} */}
+onMouseMove={(e) => {
+  const r = e.currentTarget.getBoundingClientRect();
+  const x = e.clientX - (r.left + r.width / 2);
+  const y = e.clientY - (r.top + r.height / 2);
+  const angle = Math.atan2(y, x) * (180 / Math.PI);
+
+  e.currentTarget.style.setProperty("--gun-angle", `${angle}deg`);
+}}
+onMouseLeave={(e) => {
+  e.currentTarget.style.setProperty("--gun-angle", "0deg");
+}}
+    
   onTouchMove={(e) => {
     const t = e.touches[0];
     const r = e.currentTarget.getBoundingClientRect();
