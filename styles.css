@@ -656,3 +656,10 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:999;op
     height: 26px;
   }
 }
+
+/* CURSOR TRACKING */
+
+.weapon-crosshair {
+  translate: var(--aim-x, 0px) var(--aim-y, 0px);
+  transition: translate 0.12s ease-out;
+}
