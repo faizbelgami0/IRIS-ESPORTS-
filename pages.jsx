@@ -5,7 +5,13 @@ function AboutPage({ go }) {
         lead="IRIS Esports is a multi-title competitive organization built on one belief — raw talent is everywhere, opportunity is not." />
       <section className="sec">
         <div className="wrap story">
-          <Ph label="Team photo / bootcamp shot" className="rv" />
+          {/* <Ph label="Team photo / bootcamp shot" className="rv" /> */}
+<img
+  src="IRIS TEAM.jpg"
+  alt="IRIS Esports Team"
+  className="rv team-photo"
+/>
+          
           <div>
             <div className="kick rv">Our Story</div>
             <h2 className="h2 rv d1" style={{ marginTop: 20, fontSize: "clamp(44px,5vw,80px)" }}>Named for the eye<br />that <span className="fl">sees talent.</span></h2>
