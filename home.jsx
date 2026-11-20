@@ -69,7 +69,18 @@ function HomePage({ go, openT, openN }) {
               <button className="btn btn-g clip" onClick={() => go("partners")}>Partner With Us</button>
             </div>
           </div>
-          <div className="hero-iris fadein" style={{ animationDelay: ".4s" }}><IrisEye /></div>
+          {/* <div className="hero-iris fadein" style={{ animationDelay: ".4s" }}><IrisEye /></div> */}
+          <div className="hero-iris fadein" style={{ animationDelay: ".4s" }}>
+  <div className="iris-weapon">
+    <div className="weapon-crosshair">
+      <div className="weapon-ring">
+        <div className="weapon-barrel">
+          <div className="weapon-core"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
         <div className="wrap" style={{ padding: 0, maxWidth: "none" }}>
           <div className="hero-foot fadein" style={{ animationDelay: "1.1s" }}>
