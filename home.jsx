@@ -1,6 +1,6 @@
 function Manifesto() {
   const ref = useRef(null);
-  const words = "Raw talent is everywhere. Opportunity is not. IRIS exists to find the underdog, forge them in competition and put them on the stage they earned.".split(" ");
+  const words = "India has the talent. The world deserves to see it.IRIS Esports is on a mission to nurture talent, build world-class competitors and establish India's presence among the best in global esports..".split(" ");
   const flame = new Set(["everywhere.", "not.", "underdog,", "earned."]);
   const [lit, setLit] = useState(0);
   useEffect(() => {
