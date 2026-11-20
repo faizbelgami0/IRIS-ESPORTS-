@@ -663,3 +663,16 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:999;op
   translate: var(--aim-x, 0px) var(--aim-y, 0px);
   transition: translate 0.12s ease-out;
 }
+
+
+/* GUN AIM ROTATION */
+
+.weapon-ring {
+  transform: rotate(var(--gun-angle, 0deg));
+  transition: transform 0.08s linear;
+}
+
+.weapon-barrel {
+  transform: rotate(var(--gun-angle, 0deg));
+  transition: transform 0.08s linear;
+}
