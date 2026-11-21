@@ -223,7 +223,7 @@ function NewsPage({ openN }) {
                 {/* <div className="im"><Ph label="Featured story cover" /></div> */}
 
 <div className="im">
-  <img src="./IRIS TEAM.jpg" alt="IRIS Esports"
+  <img src="IRIS-Jersey.png" alt="IRIS Esports"
     style={{width:"100%",height:"100%",objectFit:"cover"}} />
 </div>
                 
