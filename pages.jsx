@@ -223,7 +223,7 @@ function NewsPage({ openN }) {
                 {/* <div className="im"><Ph label="Featured story cover" /></div> */}
 
 <div className="im">
-  <img src="IRIS-Jersey.png" alt="IRIS Esports"
+  <img src="IRISCUP.png" alt="IRIS Esports"
     style={{width:"100%",height:"100%",objectFit:"cover"}} />
 </div>
                 
@@ -232,7 +232,16 @@ function NewsPage({ openN }) {
               <div className="nw-grid">
                 {rest.map((n, i) => (
                   <article key={n.id + c} className="nw fadein" style={{ animationDelay: i * 0.08 + "s" }} onClick={() => openN(n)}>
-                    <div className="im"><Ph label={`${n.cat} cover`} /></div>
+                    {/* <div className="im"><Ph label={`${n.cat} cover`} /></div> */}
+
+<div className="im">
+  <img
+    src="./IRIS TEAM.jpg"
+    alt={n.cat}
+    style={{width:"100%",height:"100%",objectFit:"cover"}}
+  />
+</div>
+                    
                     <div className="nw-b"><div className="nw-m mono"><span className="c">{n.cat}</span><span>{n.date}</span></div><h4>{n.title}</h4><p>{n.ex}</p></div>
                   </article>
                 ))}
