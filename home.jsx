@@ -138,7 +138,7 @@ function HomePage({ go, openT, openN }) {
       <section className="sec" data-screen-label="Mission Vision">
         <div className="wrap">
           <div className="mv rv">
-            <div><span className="big">M</span><div className="kick">Mission</div><h3 className="h3">Back the underdog.</h3>
+            <div><span className="big">M</span><div className="kick">Mission</div><h3 className="h3">Back the underdogs.</h3>
               <p>Identify, develop and empower talented gamers who lack the platform, exposure and support to show what they can do.</p></div>
             <div><span className="big">V</span><div className="kick">Vision</div><h3 className="h3">Build a recognized Indian force.</h3>
               <p>Competitive teams, real opportunities for emerging talent, tournaments of our own, and partnerships that move the ecosystem forward.</p></div>
