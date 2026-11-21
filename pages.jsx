@@ -251,7 +251,13 @@ function NewsDetail({ n }) {
     <div>
       <div className="nw-m mono" style={{ display: "flex", gap: 16 }}><span className="fl">{n.cat}</span><span className="muted">{n.date}</span></div>
       <h3>{n.title}</h3>
-      <Ph label="Article hero image" style={{ aspectRatio: "16/9" }} />
+      {/* <Ph label="Article hero image" style={{ aspectRatio: "16/9" }} /> */}
+      
+<div style={{aspectRatio:"16/9", width:"100%"}}>
+  <img src="GameTitlesLaunch.png" alt="IRIS Esports"
+    style={{width:"100%",height:"100%",objectFit:"cover"}} />
+</div>
+      
       <p className="body">{n.body}</p>
       <div className="soc" style={{ marginTop: 32 }}>{["Share on X", "Copy link"].map((s) => <a key={s} href="#" onClick={(e) => { e.preventDefault(); toast(s === "Copy link" ? "Link copied" : "Opening share…"); }}>{s}</a>)}</div>
     </div>
