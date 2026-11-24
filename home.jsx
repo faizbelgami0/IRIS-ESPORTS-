@@ -21,7 +21,13 @@ function Manifesto() {
   //   </p>
   // );
 
-
+return (
+    <div className="manifesto-video">
+        <video autoPlay muted loop playsInline>
+            <source src="IRISVIDEO.mp4" type="video/mp4" />
+        </video>
+    </div>
+);
   
 }
 
