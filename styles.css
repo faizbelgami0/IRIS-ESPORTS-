@@ -561,3 +561,16 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:999;op
 }
 
 
+.manifesto-video {
+    width: 100%;
+    max-width: 950px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.manifesto-video video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
