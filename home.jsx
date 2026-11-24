@@ -15,11 +15,14 @@ function Manifesto() {
     f(); window.addEventListener("scroll", f, { passive: true });
     return () => window.removeEventListener("scroll", f);
   }, []);
-  return (
-    <p className="mani" ref={ref}>
-      {words.map((w, i) => <span key={i} className={"w" + (i < lit ? " on" : "") + (flame.has(w) ? " f" : "")}>{w} </span>)}
-    </p>
-  );
+  // return (
+  //   <p className="mani" ref={ref}>
+  //     {words.map((w, i) => <span key={i} className={"w" + (i < lit ? " on" : "") + (flame.has(w) ? " f" : "")}>{w} </span>)}
+  //   </p>
+  // );
+
+
+  
 }
 
 function Divisions({ go }) {
