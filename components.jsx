@@ -275,7 +275,15 @@ function Footer({ go }) {
     if (!email || submitting) return;
     setSubmitting(true);
     try {
-      await submitIrisForm({ Email: email }, "New Newsletter Subscription – IRIS Esports");
+      // await submitIrisForm({ Email: email }, "New Newsletter Subscription – IRIS Esports");
+
+      
+await submitIrisForm(
+  { Email: email },
+  "New Newsletter Subscription – IRIS Esports",
+  "Newsletter"
+);
+
       toast("Thanks for subscribing!");
       setEmail("");
     } catch (err) {
