@@ -55,7 +55,8 @@ window.IRIS = {
     { name: "Instagram", url: "https://www.instagram.com/irisesports.in/", icon: "https://cdn.simpleicons.org/instagram/FFFFFF" },
     { name: "YouTube", url: "https://youtube.com/@IRISEsportsOfficial", icon: "https://cdn.simpleicons.org/youtube/FFFFFF" },
     { name: "Discord", url: "https://discord.gg/Tb93xZGAv", icon: "https://cdn.simpleicons.org/discord/FFFFFF" },
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/iris-esports-5a8a4a435/", icon: "https://cdn.simpleicons.org/linkedin/FFFFFF" },
+{ name: "LinkedIn", url: "https://www.linkedin.com/in/iris-esports-5a8a4a435/", icon: "/linkedin.svg" },
+    // { name: "LinkedIn", url: "https://www.linkedin.com/in/iris-esports-5a8a4a435/", icon: "https://cdn.simpleicons.org/linkedin/FFFFFF" },
   ],
   email: { general: "faiz@irisesports.in", business: "faiz@irisesports.in", recruit: "faiz@irisesports.in" },
 };
