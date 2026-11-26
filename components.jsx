@@ -53,7 +53,7 @@ function Nav({ page, go }) {
         <div className="wrap nav-in">
           <a className="brand" onClick={() => nav("home")} style={{ cursor: "pointer" }}>
             <img src="IRISLogoWhiteShade.png" alt="IRIS Esports" />
-            <b>IRIS<span>·</span>>ESPORTS</b>
+            <b>IRIS<span>·</span>ESPORTS</b>
           </a>
           <nav className="nav-l">
             {NAV.map(([k, l]) => <a key={k} className={page === k ? "on" : ""} onClick={() => nav(k)}>{l.toUpperCase()}</a>)}
