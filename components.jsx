@@ -160,21 +160,80 @@ const toast = (s) => _toast(s);
 
 // Shared EmailJS integration for all IRIS website forms.
 
+// async function submitIrisForm(fields, subject, formType) {
+//   if (!window.emailjs || typeof window.emailjs.send !== "function") {
+//     throw new Error("Email service is temporarily unavailable. Please try again.");
+//   }
+
+//   const formData = Object.entries(fields)
+//     .map(([label, value]) => `${label}: ${String(value ?? "").trim()}`)
+//     .join("\n");
+
+//   return window.emailjs.send(
+//     "service_z8etaxa",
+//     "template_k69s0ln",
+//     {
+//       subject,
+//       form_data: formData,
+//       form_type: formType
+//     }
+//   );
+// }
+
+
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 async function submitIrisForm(fields, subject, formType) {
   if (!window.emailjs || typeof window.emailjs.send !== "function") {
-    throw new Error("Email service is temporarily unavailable. Please try again.");
+    throw new Error(
+      "Email service is temporarily unavailable. Please try again."
+    );
   }
 
-  const formData = Object.entries(fields)
-    .map(([label, value]) => `${label}: ${String(value ?? "").trim()}`)
-    .join("\n");
+  const rows = Object.entries(fields)
+    .map(([label, value]) => {
+      return `
+        <tr>
+          <td style="padding:14px 16px;border-bottom:1px solid #e8e8ef;font-size:14px;font-weight:bold;color:#171a2e;width:35%;vertical-align:top;">
+            ${escapeHtml(label)}
+          </td>
+          <td style="padding:14px 16px;border-bottom:1px solid #e8e8ef;font-size:14px;color:#333333;line-height:1.6;vertical-align:top;word-break:break-word;">
+            ${escapeHtml(value).replace(/\n/g, "<br>")}
+          </td>
+        </tr>
+      `;
+    })
+    .join("");
+
+  const formDataHtml = `
+    <table
+      role="presentation"
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="width:100%;border-collapse:collapse;background:#ffffff;border:1px solid #e8e8ef;border-radius:8px;"
+    >
+      <tbody>
+        ${rows}
+      </tbody>
+    </table>
+  `;
 
   return window.emailjs.send(
     "service_z8etaxa",
     "template_k69s0ln",
     {
       subject,
-      form_data: formData,
+      form_data_html: formDataHtml,
       form_type: formType
     }
   );
