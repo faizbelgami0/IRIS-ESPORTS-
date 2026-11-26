@@ -159,7 +159,8 @@ function Toast() {
 const toast = (s) => _toast(s);
 
 // Shared EmailJS integration for all IRIS website forms.
-async function submitIrisForm(fields, subject) {
+
+async function submitIrisForm(fields, subject, formType) {
   if (!window.emailjs || typeof window.emailjs.send !== "function") {
     throw new Error("Email service is temporarily unavailable. Please try again.");
   }
@@ -168,16 +169,17 @@ async function submitIrisForm(fields, subject) {
     .map(([label, value]) => `${label}: ${String(value ?? "").trim()}`)
     .join("\n");
 
-  // EmailJS resolves this promise when the request is accepted and rejects it on failure.
   return window.emailjs.send(
     "service_z8etaxa",
     "template_k69s0ln",
     {
       subject,
-      form_data: formData
+      form_data: formData,
+      form_type: formType
     }
   );
 }
+
 
 function StatusTag({ s }) {
   const map = { upcoming: ["up", "Upcoming"], ongoing: ["live", "Live"], completed: ["done", "Completed"] };
