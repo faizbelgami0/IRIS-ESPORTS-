@@ -159,18 +159,59 @@ function Toast() {
 const toast = (s) => _toast(s);
 
 // Shared FormSubmit integration for the static React website.
+// async function submitIrisForm(fields, subject) {
+//   const response = await fetch("https://formsubmit.co/ajax/faiz@irisesports.in", {
+//     method: "POST",
+//     headers: { "Content-Type": "application/json", "Accept": "application/json" },
+//     body: JSON.stringify({ ...fields, _subject: subject, _template: "table", _captcha: "false" })
+//   });
+//   const result = await response.json().catch(() => ({}));
+//   if (!response.ok || result.success !== "true" && result.success !== true) {
+//     throw new Error(result.message || "Your message could not be sent. Please try again.");
+//   }
+//   return result;
+// }
+
+
 async function submitIrisForm(fields, subject) {
-  const response = await fetch("https://formsubmit.co/ajax/faiz@irisesports.in", {
-    method: "POST",
-    headers: { "Content-Type": "application/json", "Accept": "application/json" },
-    body: JSON.stringify({ ...fields, _subject: subject, _template: "table", _captcha: "false" })
-  });
-  const result = await response.json().catch(() => ({}));
-  if (!response.ok || result.success !== "true" && result.success !== true) {
-    throw new Error(result.message || "Your message could not be sent. Please try again.");
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 15000);
+
+  try {
+    const response = await fetch("https://formsubmit.co/ajax/faiz@irisesports.in", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        ...fields,
+        _subject: subject,
+        _template: "table",
+        _captcha: "false"
+      }),
+      signal: controller.signal
+    });
+
+    const result = await response.json().catch(() => ({}));
+
+    if (!response.ok || (result.success !== "true" && result.success !== true)) {
+      throw new Error(result.message || "Your message could not be sent. Please try again.");
+    }
+
+    return result;
+
+  } catch (error) {
+    if (error.name === "AbortError") {
+      throw new Error("The email service is taking too long. Please try again.");
+    }
+    throw error;
+
+  } finally {
+    clearTimeout(timeout);
   }
-  return result;
 }
+
 
 function StatusTag({ s }) {
   const map = { upcoming: ["up", "Upcoming"], ongoing: ["live", "Live"], completed: ["done", "Completed"] };
